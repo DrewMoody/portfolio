@@ -1,5 +1,10 @@
-Source code for my portfolio.
+This is the source code for my portfolio.
 
-Link: 
+Link: [https://drewmoody.netlify.com/]
 
-WARNING: Make sure to edit `static/robots.txt` to include your domain for the sitemap!
+This is a work in progress. TODO:
+
+- Add about me & contact text
+- Complete contact form validation & submission
+- Clean up styling -- move reused styled to the theme and access through props
+- Add in Gatsby image for better load times

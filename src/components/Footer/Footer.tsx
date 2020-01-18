@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import styled from "styled-components";
 
 const StyledFooter = styled.footer`
-  background: linear-gradient(5deg,#151e29,#202c3a);
+  background: linear-gradient(5deg, #151e29, #202c3a);
   box-shadow: 0px 3px 6px 3px #000000a1;
   color: #c7d0d8;
   display: flex;
@@ -31,10 +31,10 @@ const IconsContainer = styled.div`
 const Footer = (): JSX.Element => (
   <StyledFooter>
     <IconsContainer>
-      <a target="_blank" href="https://www.github.com">
+      <a target="_blank" href="https://www.github.com/drewmoody">
         <FaGithub />
       </a>
-      <a target="_blank" href="https://www.linkedin.com">
+      <a target="_blank" href="https://www.linkedin.com/in/moodydrew/">
         <FaLinkedin />
       </a>
     </IconsContainer>
