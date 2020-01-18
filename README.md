@@ -7,5 +7,7 @@ This is a work in progress. TODO:
 - Add about me & contact text
 - Complete contact form validation & submission
 - Semantic HTML
+- Animations
+- Button disable
 - Clean up styling -- move reused styled to the theme and access through props
 - Add in Gatsby image for better load times
