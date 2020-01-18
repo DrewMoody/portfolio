@@ -9,5 +9,6 @@ This is a work in progress. TODO:
 - Semantic HTML
 - Animations
 - Button disable
+- Improve mobile UI (design is bland with the images removed)
 - Clean up styling -- move reused styled to the theme and access through props
 - Add in Gatsby image for better load times
