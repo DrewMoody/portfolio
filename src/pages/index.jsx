@@ -83,7 +83,7 @@ const CTAButton = styled.button`
   padding: 0.75rem;
   font-family: ${props => props.theme.fonts.header};
   font-size: 1.5rem;
-  color: #f7d2b7;
+  color: #f1ebe5;
   background: ${props => props.theme.dark.dark2};
   background: linear-gradient(20deg, #202d3a, #273746);
 
