@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
+// background: #fffdfd3d;
+// backdrop-filter: blur(40px) saturate(1.8);
+
 const StyledHeader = styled.header`
   color: #231e1f;
   display: flex;
@@ -12,8 +15,6 @@ const StyledHeader = styled.header`
   z-index: 1000;
   flex-direction: column;
   align-items: center;
-  background: #fffdfd3d;
-  backdrop-filter: blur(40px) saturate(1.8);
 
   @media (min-width: 600px) {
     flex-direction: row;

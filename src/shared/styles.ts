@@ -84,7 +84,7 @@ export const SectionHeader = styled.p`
 `;
 
 export const WorkText = styled(SectionHeader)`
-  color: #e19aa6;
+  color: #ea9797;
 `;
 
 export const AboutText = styled(SectionHeader)`

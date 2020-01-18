@@ -44,6 +44,8 @@ const CTAContent = styled.div`
   }
 `;
 
+// text-shadow: -1px 1px 1px #00000033;
+
 const CTAHead = styled.p`
   font-family: ${props => props.theme.fonts.header};
   font-size: 3rem;
@@ -76,14 +78,14 @@ const CTASupport = styled.p`
 `;
 
 const CTAButton = styled.button`
-  box-shadow: -2px 4px 5px 2px #00000054;
+  box-shadow: -1px 3px 4px 0px #00000054;
   border-radius: 4px;
   padding: 0.75rem;
   font-family: ${props => props.theme.fonts.header};
   font-size: 1.5rem;
-  color: ${props => props.theme.themeColors.pink};
-  color: #ffc1c4;
+  color: #f7d2b7;
   background: ${props => props.theme.dark.dark2};
+  background: linear-gradient(20deg, #202d3a, #273746);
 
   @media (min-width: 930px) {
     font-size: 1.75rem;

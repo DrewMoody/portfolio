@@ -17,8 +17,8 @@ export const theme = {
   gradients: {
     main: "linear-gradient(45deg, #ca5590, #ef9f79)",
     support: "linear-gradient(45deg,#779cc1,#79efc3)",
-    // newMain: "linear-gradient(45deg,#d299a3,#d0b9a1)"
-    newMain: "linear-gradient(45deg,#d28793,#eca8b3,#f7dcc1)"
+    // newMain: "linear-gradient(45deg,#f37a8e,#eca8b3,#f7dcc1)"
+    newMain: "linear-gradient(45deg,#dc7587,#ea9191,#ffcc9e)"
   },
   themeColors: {
     gold: "#b9b39b",
