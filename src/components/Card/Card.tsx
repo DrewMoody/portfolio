@@ -63,6 +63,8 @@ export interface ICard {
   description: string;
   color: string;
   background: string;
+  repoRef?: string | null;
+  siteRef?: string | null;
 }
 
 interface IProps {
@@ -71,23 +73,36 @@ interface IProps {
 
 export default (props: IProps) => {
   const { card } = props;
+
+  const openLink = (link: string) => () => window.open(link, "_blank");
+
   return (
     <CardContainer>
       <img src={card.imgSrc} />
       <CardInfo>
         <ContentTitle style={{ color: card.color }}>{card.title}</ContentTitle>
-        <CardSupport style={{ color: card.color + "de" }}>
+        <CardSupport style={{ color: card.color + "e6" }}>
           {card.supportText}
         </CardSupport>
         <ContentDescription>{card.description}</ContentDescription>
       </CardInfo>
       <ButtonContainer>
-        <CardButton style={{ background: card.background }}>
-          <div style={{ color: card.color }}>Repo</div>
-        </CardButton>
-        <CardButton style={{ background: card.background }}>
-          <div style={{ color: card.color }}>Site</div>
-        </CardButton>
+        {!!card.repoRef && (
+          <CardButton
+            onClick={openLink(card.repoRef)}
+            style={{ background: card.background }}
+          >
+            <div style={{ color: card.color }}>Repo</div>
+          </CardButton>
+        )}
+        {card.siteRef && (
+          <CardButton
+            onClick={openLink(card.siteRef)}
+            style={{ background: card.background }}
+          >
+            <div style={{ color: card.color }}>Site</div>
+          </CardButton>
+        )}
       </ButtonContainer>
     </CardContainer>
   );

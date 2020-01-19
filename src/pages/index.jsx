@@ -122,7 +122,7 @@ export const MaxSizeImg = styled.img`
 `;
 
 const skills = [
-  'front end development',
+  'frontend development',
   'Angular',
   'RxJS',
   'TypeScript',

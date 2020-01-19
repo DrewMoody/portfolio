@@ -25,6 +25,10 @@ const ContactTitle = styled(SectionTitle)`
   color: #f1a36c;
 `;
 
+const ContactDescription = styled(ContentDescription)`
+  margin-bottom: 1rem;
+`;
+
 const Contact = (): JSX.Element => (
   <Fragment>
     <CTAHeaderText id="contact">
@@ -34,13 +38,12 @@ const Contact = (): JSX.Element => (
       <HalfImage imgSrc="images/contact.jpg">
         <Fragment>
           <ContactTitle>Get In Touch</ContactTitle>
-          <ContentDescription>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-            maximus egestas sagittis. Integer tellus arcu, malesuada quis
-            hendrerit eu, condimentum sed diam. Integer in semper nisl, in
-            pretium risus. Mauris eget sapien euismod, convallis enim vel,
-            condimentum tortor.
-          </ContentDescription>
+          <ContactDescription>
+            Whether you&apos;re looking to collaborate on a project, or you have
+            an idea for an app that&apos;s "like [facebook, twitter, instagram]
+            but for [noun]," I&apos;d love to hear from you! Just drop me a line
+            using the form below.
+          </ContactDescription>
           <ContactForm />
         </Fragment>
       </HalfImage>
