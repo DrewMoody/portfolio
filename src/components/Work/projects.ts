@@ -25,7 +25,7 @@ export const myProjects: ICard[] = [
     description:
       "I am obsessed with reactive programming. This quick StackBlitz demonstrates some basics using user inputs. It also uses form validation and Angular Material.",
     color: "#98c1d6",
-    supportText: "Angular, TS, RxJS",
+    supportText: "Angular / TS / RxJS",
     title: "Reactive Example",
     imgSrc:
       "https://billfish.org/wp-content/uploads/2019/08/placeholder-image.jpg",
