@@ -4,7 +4,6 @@ Link: https://drewmoody.netlify.com/
 
 This is a work in progress. TODO:
 
-- Add about me & contact text
 - Complete contact form validation & submission
 - Semantic HTML
 - Animations
