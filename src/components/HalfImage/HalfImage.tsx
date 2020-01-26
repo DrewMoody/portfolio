@@ -6,9 +6,13 @@ interface IProps {
   imgSrc: string;
 }
 
+// for img to go top half
+// flex-direction: column;
+// on img
+// flex: 1 1 60vw;
+// object-position: 50% 30%;
 const HalfImageWrapper = styled.div`
   display: flex;
-  border-radius: 8px;
   overflow: hidden;
   margin: 0;
   background: ${props => props.theme.dark.dark2};
@@ -17,6 +21,7 @@ const HalfImageWrapper = styled.div`
 
   @media (min-width: 500px) {
     margin: 2rem;
+    border-radius: 8px;
   }
 
   > img {
@@ -35,9 +40,14 @@ const HalfImageWrapper = styled.div`
 
   > div {
     flex: 1 1 67%;
-    padding: 2rem;
+    padding: 1.5rem;
     align-self: center;
     max-width: 728px;
+    margin: 1.5rem 0 3rem 0;
+
+    @media (min-width: 600px) {
+      padding: 2rem;
+    }
   }
 `;
 

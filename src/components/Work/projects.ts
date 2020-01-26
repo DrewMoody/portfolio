@@ -10,11 +10,11 @@ import { ICard } from "../Card/Card";
 export const myProjects: ICard[] = [
   {
     background: "#d8a5ae",
-    color: "#d8a5ae",
+    color: "#de8d98",
     description:
-      "The projects listed here are old; they're not indicative of my current skills. I'm working on building bigger, more robust full-stack applications, so stay tuned!",
-    supportText: "Coming soon",
-    title: "More Great Projects",
+      "The projects listed here are mostly old; they're not indicative of my current skills. I'm working on building bigger, more robust full-stack applications, so stay tuned!",
+    supportText: "Coming soon!",
+    title: "More Projects",
     imgSrc:
       "https://billfish.org/wp-content/uploads/2019/08/placeholder-image.jpg",
     repoRef: null,
@@ -23,8 +23,8 @@ export const myProjects: ICard[] = [
   {
     background: "linear-gradient(45deg, #7aaec7, #a1c4d6)",
     description:
-      "I am obsessed with reactive programming. This quick StackBlitz demonstrates some basics using user inputs. It also uses form validation and Angular Material.",
-    color: "#98c1d6",
+      "I am a huge fan of reactive programming. This quick StackBlitz demonstrates some RxJS basics -- watching input change events and triggering the update of data on a table. It also uses form validation and Angular Material.",
+    color: "#89b1c5",
     supportText: "Angular / TS / RxJS",
     title: "Reactive Example",
     imgSrc:
@@ -36,7 +36,7 @@ export const myProjects: ICard[] = [
     background: "linear-gradient(20deg, #6ea99a, #84b3a8)",
     description:
       "The first site I ever made with Gatsby, and one of the first sites I ever made period. Features large hero headers (hence the name), a grid for displaying blog posts, and a beautiful UI.",
-    color: "#9abfb6",
+    color: "#88b3ab",
     supportText: "Gatsby / React",
     title: "Gatsby Hero",
     imgSrc:
@@ -46,7 +46,7 @@ export const myProjects: ICard[] = [
   },
   {
     background: "linear-gradient(20deg, #9a9066, #c1b898)",
-    color: "#b9b39b",
+    color: "#b3ac93",
     description:
       "The first group project I was involved in. This is an app for training/studying based on the idea of spaced repetition. I designed the database and wrote much of the backend code. ",
     supportText: "React / Node / PostgreSQL",

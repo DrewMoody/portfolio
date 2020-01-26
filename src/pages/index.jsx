@@ -38,6 +38,11 @@ const CTAContent = styled.div`
   width: 80%;
   max-width: 428px;
   padding: 1rem;
+  margin-bottom: 2rem;
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
 
   @media (min-width: 1024px) {
     width: 90%;
@@ -48,14 +53,17 @@ const CTAContent = styled.div`
 
 const CTAHead = styled.p`
   font-family: ${props => props.theme.fonts.header};
-  font-size: 3rem;
+  font-size: 2.75rem;
   font-weight: bold;
   margin-bottom: 1rem;
   text-align: center;
 
+  @media (min-width: 404px) {
+    font-size: 3rem;
+  }
+
   @media (min-width: 768px) {
     font-size: 2.75rem;
-    text-align: unset;
   }
 
   @media (min-width: 930px) {
@@ -68,12 +76,12 @@ const CTAHead = styled.p`
 `;
 
 const CTASupport = styled.p`
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   margin-bottom: 2rem;
   text-align: center;
 
-  @media (min-width: 768px) {
-    text-align: unset;
+  @media (min-width: 404px) {
+    font-size: 1.5rem;
   }
 `;
 

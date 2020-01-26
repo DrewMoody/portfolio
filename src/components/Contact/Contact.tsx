@@ -22,7 +22,7 @@ const ContactDiv = styled.div`
 `;
 
 const ContactTitle = styled(SectionTitle)`
-  color: #f1a36c;
+  color: #dc9058;
 `;
 
 const ContactDescription = styled(ContentDescription)`

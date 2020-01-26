@@ -35,9 +35,13 @@ const StyledHeader = styled.header`
     }
 
     a {
-      padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+      padding: 1rem 0.5rem 0.5rem 0.5rem;
       font-size: 1rem;
       align-self: stretch;
+
+      @media (min-width: 600px) {
+        padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+      }
 
       &:not(:last-child) {
         margin-right: 1.5rem;

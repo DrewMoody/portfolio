@@ -22,7 +22,7 @@ const IconsContainer = styled.div`
       color: #c7d0d8;
 
       &:hover {
-        color: #e19aa6;
+        color: #de8d98;
       }
     }
   }

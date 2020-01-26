@@ -9,15 +9,16 @@ const CardContainer = styled.div`
   box-shadow: 0 0 10px 4px #0e0e0e8c;
   display: flex;
   flex-direction: column;
-  flex: 0 0 42%;
-  min-width: 368px;
+  flex: 0 0 84%;
+  min-width: 300px;
 
   @media (min-width: 600px) {
+    flex: 0 0 54%;
     min-width: 442px;
   }
 
   @media (min-width: 1024px) {
-    flex: 1 0 28%;
+    flex: 1 0 34%;
   }
 
   img {
@@ -49,11 +50,30 @@ const CardInfo = styled.div`
   padding: 1.25rem;
 `;
 
+const CardTitle = styled(ContentTitle)`
+  @media (max-width: 599px) {
+    font-size: 1.75rem;
+  }
+`;
+
+const CardDescription = styled(ContentDescription)`
+  @media (max-width: 599px) {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+`;
+
 const CardSupport = styled.h3`
   color: #a9e8cbd4;
-  font-size: 1.25rem;
-  margin-bottom: 1.75rem;
+  font-size: 1.125rem;
+  margin-bottom: 1.25rem;
   letter-spacing: 0.015rem;
+
+  @media (min-width: 600px) {
+    font-size: 1.25rem;
+    margin-bottom: 1.75rem;
+  }
 `;
 
 export interface ICard {
@@ -80,11 +100,11 @@ export default (props: IProps) => {
     <CardContainer>
       <img src={card.imgSrc} />
       <CardInfo>
-        <ContentTitle style={{ color: card.color }}>{card.title}</ContentTitle>
-        <CardSupport style={{ color: card.color + "e6" }}>
+        <CardTitle style={{ color: card.color }}>{card.title}</CardTitle>
+        <CardSupport style={{ color: card.color }}>
           {card.supportText}
         </CardSupport>
-        <ContentDescription>{card.description}</ContentDescription>
+        <CardDescription>{card.description}</CardDescription>
       </CardInfo>
       <ButtonContainer>
         {!!card.repoRef && (

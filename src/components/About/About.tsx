@@ -17,18 +17,27 @@ const AboutDiv = styled.div`
 `;
 
 const AboutTitle = styled(SectionTitle)`
-  color: #9accc0;
+  color: #80c1b2;
 `;
 
 const SkillsTitle = styled(AboutTitle)`
-  margin-bottom: 0.25rem;
+  margin-top: 3rem;
+  margin-bottom: 0.75rem;
+
+  @media (min-width: 600px) {
+    margin-bottom: 0.25rem;
+  }
 `;
 
 const PastSkillDesc = styled.p`
   line-height: 1.625;
   color: #d6dde4b5;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-style: italic;
+
+  @media (min-width: 600px) {
+    font-size: 1rem;
+  }
 `;
 
 const KeyContainer = styled.div`
@@ -40,8 +49,8 @@ const KeyContainer = styled.div`
 
 const PastSkillKey = styled.div`
   height: 1.125rem;
-  width: 1.125rem;
-  margin-right: 0.5rem;
+  flex: 0 0 1.125rem;
+  margin-right: 0.75rem;
   background: #ea9797;
   border-radius: 4px;
 `;
@@ -57,7 +66,7 @@ const SkillsContainer = styled.div`
     color: #d6dde4;
     flex: 1 1 calc(50% - 1rem);
     margin: 0.5rem;
-    min-width: 160px;
+    min-width: 130px;
   }
 
   > ${PastExpSkill} {
@@ -92,9 +101,7 @@ const About = () => (
           <SkillsTitle>Skills</SkillsTitle>
           <KeyContainer>
             <PastSkillKey />
-            <PastSkillDesc>
-              Something I'm learning or have previous experience with
-            </PastSkillDesc>
+            <PastSkillDesc>Learning or have previous experience</PastSkillDesc>
           </KeyContainer>
           <SkillsContainer>
             <div>JavaScript/ES6+</div>

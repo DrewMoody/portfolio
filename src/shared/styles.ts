@@ -56,17 +56,26 @@ export const ContentTitle = styled.h2`
 
 export const SectionTitle = styled.h2`
   margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
-  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+  font-size: 2.375rem;
   letter-spacing: 0.015rem;
+
+  @media (min-width: 600px) {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
 `;
 
 export const ContentDescription = styled.p`
   margin-bottom: 2rem;
   color: #d6dde4;
   line-height: 1.625;
-  font-size: 1.125rem;
+  font-size: 1rem;
   flex-grow: 1;
+
+  @media (min-width: 599px) {
+    font-size: 1.125rem;
+  }
 `;
 
 export const SectionHeader = styled.p`
@@ -84,7 +93,7 @@ export const SectionHeader = styled.p`
 `;
 
 export const WorkText = styled(SectionHeader)`
-  color: #ea9797;
+  color: #de8d98;
 `;
 
 export const AboutText = styled(SectionHeader)`
