@@ -17,17 +17,17 @@ const CardWrapper = styled.div`
       content: " ";
       flex: 0 0 1.25rem;
 
-      @media (min-width: 500px) {
-        flex: 0 0 1.75rem;
+      @media (min-width: 1024px) {
+        flex: 0 0 1.375rem;
       }
     }
 
     > * {
-      margin: 1.25rem;
+      margin: 1.25rem 1rem;
       margin-right: 0;
 
-      @media (min-width: 500px) {
-        margin: 1.25rem 1.75rem;
+      @media (min-width: 1024px) {
+        margin: 1.25rem 1.375rem;
         margin-right: 0;
       }
     }

@@ -13,8 +13,9 @@ const CardContainer = styled.div`
   min-width: 300px;
 
   @media (min-width: 600px) {
-    flex: 0 0 54%;
-    min-width: 442px;
+    flex: 0 0 46%;
+    min-width: 352px;
+    max-width: 440px;
   }
 
   @media (min-width: 1024px) {
@@ -51,13 +52,13 @@ const CardInfo = styled.div`
 `;
 
 const CardTitle = styled(ContentTitle)`
-  @media (max-width: 599px) {
-    font-size: 1.75rem;
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
   }
 `;
 
 const CardDescription = styled(ContentDescription)`
-  @media (max-width: 599px) {
+  @media (max-width: 768px) {
     font-size: 1rem;
     margin-bottom: 1rem;
     line-height: 1.5;
@@ -70,7 +71,7 @@ const CardSupport = styled.h3`
   margin-bottom: 1.25rem;
   letter-spacing: 0.015rem;
 
-  @media (min-width: 600px) {
+  @media (min-width: 769px) {
     font-size: 1.25rem;
     margin-bottom: 1.75rem;
   }
