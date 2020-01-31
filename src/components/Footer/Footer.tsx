@@ -31,10 +31,18 @@ const IconsContainer = styled.div`
 const Footer = (): JSX.Element => (
   <StyledFooter>
     <IconsContainer>
-      <a target="_blank" href="https://www.github.com/drewmoody">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.github.com/drewmoody"
+      >
         <FaGithub />
       </a>
-      <a target="_blank" href="https://www.linkedin.com/in/moodydrew/">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.linkedin.com/in/moodydrew/"
+      >
         <FaLinkedin />
       </a>
     </IconsContainer>

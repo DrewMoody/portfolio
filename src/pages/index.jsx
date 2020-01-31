@@ -9,6 +9,17 @@ import SEO from '../components/SEO/SEO';
 import config from '../../data/SiteConfig';
 import About from '../components/About/About';
 import Contact from '../components/Contact/Contact';
+import { ThemeProvider } from '@material-ui/styles';
+import { createMuiTheme } from '@material-ui/core/styles';
+
+const darkTheme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#f1a36c'
+    },
+    type: 'dark'
+  }
+});
 
 const HomeContainer = styled.div`
   height: 100vh;
@@ -168,44 +179,46 @@ class Index extends React.Component {
   render() {
     const { displayedSkill } = this.state;
     return (
-      <Layout>
-        <HomeContainer>
-          <Helmet title={config.siteTitle} />
-          <SEO />
-          <StyledCTA>
-            <CTAContainer>
-              <CTAContent>
-                <CTAHead>Hi, I&apos;m Drew</CTAHead>
-                <CTASupport>
-                  A software developer specializing in
-                  {` ${displayedSkill}`}
-                </CTASupport>
-                <CTAButton type="button" onClick={() => navigate('#work')}>
-                  Check out my work
-                </CTAButton>
-              </CTAContent>
-            </CTAContainer>
-            <AttributionWrapper>
-              <MaxSizeImg src="images/04.png" alt="big-brain" />
-              <p>
-                image courtesy of
-                <a
-                  href="https://absurd.design"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  {' '}
-                  absurd.design
-                </a>
-              </p>
-            </AttributionWrapper>
-          </StyledCTA>
-        </HomeContainer>
-        <Work />
-        <About />
-        <Contact />
-        <Footer />
-      </Layout>
+      <ThemeProvider theme={darkTheme}>
+        <Layout>
+          <HomeContainer>
+            <Helmet title={config.siteTitle} />
+            <SEO />
+            <StyledCTA>
+              <CTAContainer>
+                <CTAContent>
+                  <CTAHead>Hi, I&apos;m Drew</CTAHead>
+                  <CTASupport>
+                    A software developer specializing in
+                    {` ${displayedSkill}`}
+                  </CTASupport>
+                  <CTAButton type="button" onClick={() => navigate('#work')}>
+                    Check out my work
+                  </CTAButton>
+                </CTAContent>
+              </CTAContainer>
+              <AttributionWrapper>
+                <MaxSizeImg src="images/04.png" alt="big-brain" />
+                <p>
+                  image courtesy of
+                  <a
+                    href="https://absurd.design"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    {' '}
+                    absurd.design
+                  </a>
+                </p>
+              </AttributionWrapper>
+            </StyledCTA>
+          </HomeContainer>
+          <Work />
+          <About />
+          <Contact />
+          <Footer />
+        </Layout>
+      </ThemeProvider>
     );
   }
 }

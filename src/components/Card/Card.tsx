@@ -97,8 +97,8 @@ export default (props: IProps) => {
   const openLink = (link: string) => () => window.open(link, "_blank");
 
   return (
-    <CardContainer>
-      <img src={card.imgSrc} />
+    <CardContainer style={{ borderTop: `8px solid ${card.color}cc` }}>
+      {card.imgSrc && <img src={card.imgSrc} />}
       <CardInfo>
         <CardTitle style={{ color: card.color }}>{card.title}</CardTitle>
         <CardSupport style={{ color: card.color }}>

@@ -15,8 +15,7 @@ export const myProjects: ICard[] = [
       "The projects listed here are mostly old; they're not indicative of my current skills. I'm working on building bigger, more robust full-stack applications, so stay tuned!",
     supportText: "Coming soon!",
     title: "More Projects",
-    imgSrc:
-      "https://billfish.org/wp-content/uploads/2019/08/placeholder-image.jpg",
+    // imgSrc: "https://billfish.org/wp-content/uploads/2019/08/placeholder-image.jpg",
     repoRef: null,
     siteRef: null
   },
@@ -27,8 +26,7 @@ export const myProjects: ICard[] = [
     color: "#89b1c5",
     supportText: "Angular / TS / RxJS",
     title: "Reactive Example",
-    imgSrc:
-      "https://billfish.org/wp-content/uploads/2019/08/placeholder-image.jpg",
+    // imgSrc: "https://billfish.org/wp-content/uploads/2019/08/placeholder-image.jpg",
     // repoRef: "https://github.com/DrewMoody/gatsby-hero",
     siteRef: "https://stackblitz.com/edit/angular-zwmji9"
   },
@@ -39,8 +37,7 @@ export const myProjects: ICard[] = [
     color: "#88b3ab",
     supportText: "Gatsby / React",
     title: "Gatsby Hero",
-    imgSrc:
-      "https://billfish.org/wp-content/uploads/2019/08/placeholder-image.jpg",
+    // imgSrc: "https://billfish.org/wp-content/uploads/2019/08/placeholder-image.jpg",
     repoRef: "https://github.com/DrewMoody/gatsby-hero",
     siteRef: "https://gatsby-hero.netlify.com"
   },
@@ -51,8 +48,7 @@ export const myProjects: ICard[] = [
       "The first group project I was involved in. This is an app for training/studying based on the idea of spaced repetition. I designed the database and wrote much of the backend code. ",
     supportText: "React / Node / PostgreSQL",
     title: "Space Reps",
-    imgSrc:
-      "https://billfish.org/wp-content/uploads/2019/08/placeholder-image.jpg",
+    // imgSrc: "https://billfish.org/wp-content/uploads/2019/08/placeholder-image.jpg",
     repoRef: "https://github.com/Lambda-School-Labs/Labs8-SpacedRep",
     siteRef: "https://spaced-repetition.netlify.com/"
   }

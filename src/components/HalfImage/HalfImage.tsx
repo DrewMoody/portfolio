@@ -17,15 +17,15 @@ const HalfImageWrapper = styled.div`
   margin: 0;
   background: ${props => props.theme.dark.dark2};
   box-shadow: 0 0 10px 4px #0e0e0e8c;
-  max-width: 1024px;
+  max-width: 1168px;
 
   @media (min-width: 500px) {
-    margin: 2rem;
+    margin: 1.5rem;
     border-radius: 8px;
   }
 
   > img {
-    flex: 1 1 33%;
+    flex: 1 1 40%;
     filter: brightness(0.9);
     min-width: 0;
     min-height: 0;
@@ -39,7 +39,7 @@ const HalfImageWrapper = styled.div`
   }
 
   > div {
-    flex: 1 1 67%;
+    flex: 1 1 60%;
     padding: 1.5rem;
     align-self: center;
     max-width: 728px;
