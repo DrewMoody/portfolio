@@ -11,6 +11,11 @@ const HeaderContainer = styled.div`
   background: ${props => props.theme.headerBg};
 `;
 
+/**
+* Combining filter property with opacity does NOT work on iOS Safari
+*/
+// opacity: ${props => props.theme.headerImgOpacity};
+
 const BgImg = styled.img`
   position: absolute;
   top: 0;
@@ -21,7 +26,6 @@ const BgImg = styled.img`
   width: 100%;
   object-fit: scale-down;
   filter: ${props => props.theme.headerImgFilter} opacity(${props => props.theme.headerImgOpacity});
-  opacity: ${props => props.theme.headerImgOpacity};
 `;
 
 const Attribution = styled.p`
