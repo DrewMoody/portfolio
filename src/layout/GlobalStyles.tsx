@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-export const theme = {
+export const baseTheme = {
   colors: {
     main: "#ec7b8b",
     support: "#79e4c2"
@@ -31,6 +31,41 @@ export const theme = {
   }
 };
 
+export const darkTheme = {
+  ...baseTheme,
+  mainFontColor: "#d6dde4",
+  headerColor: "#ffffff",
+  navColor: "#f19399",
+  headerBg:
+    "linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgb(0, 0, 0)), linear-gradient(90deg, rgb(255, 0, 136), rgb(252, 138, 14))",
+  headerImgFilter: "invert(1)",
+  headerImgOpacity: "5%",
+  headerText: "#ffffff",
+  headerButtonText: "#fd727a",
+  headerBorderBg:
+    "linear-gradient(0deg, rgba(35, 0, 28, 0), rgba(119, 0, 255, 0)), linear-gradient(90deg, rgb(255, 0, 136), rgb(255, 141, 0))",
+  workWrapperBg:
+    "linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgb(0, 0, 0)), linear-gradient(90deg, rgb(255, 0, 136), rgb(252, 138, 14))",
+  workSectionBg:
+    "linear-gradient(180deg, rgba(84, 27, 74, 0.33), rgb(20, 20, 20))",
+  workColors: ["#f970c2", "#f97470", "#f9aa70", "#efc859"],
+  cardBg: "#1d1a1a",
+  sectionTopBorder: "1px solid #80808026",
+  sectionBg: "#141414",
+  textColor: "#ffffff",
+  contactButton: "#66eae1",
+  contactButtonBg: "#092833",
+  footerBg: "#212121",
+  footerBorderBg:
+    "linear-gradient(0deg,rgba(35,0,28,0),rgba(119,0,255,0)),linear-gradient(90deg,rgb(0, 137, 255),rgb(0, 255, 126))",
+  footerColor: "#c7d0d8",
+  footerHoverColor: "#03e2d8"
+};
+
+export const lightTheme = {
+  workColors: []
+};
+
 export const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Open+Sans&display=swap');
   @import url('https://fonts.googleapis.com/css?family=Work+Sans:800&display=swap');
@@ -42,9 +77,9 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    font-family: ${theme.fonts.body};
+    font-family: ${props => props.theme.fonts.body};
     background: #eef1f3;
-    color: ${theme.fontColor};
+    color: ${props => props.theme.mainFontColor};
   }
 
   main {
@@ -249,8 +284,9 @@ export const GlobalStyle = createGlobalStyle`
   h1, h2, h3, h4, h5, h6 {
     margin: 0; 
     font-size: inherit;
-    font-weight: ${theme.fontWeights.header};
-    font-family: ${theme.fonts.header};
+    font-weight: ${props => props.theme.fontWeights.header};
+    font-family: ${props => props.theme.fonts.header};
+    color: ${props => props.theme.headerColor};
   }
 
   p {

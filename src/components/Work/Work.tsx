@@ -1,16 +1,22 @@
-import React, { Fragment } from "react";
+import React from "react";
 import styled from "styled-components";
-import { circuitSvg } from "../../shared/circuit";
-import { CTAHeaderText, WorkText } from "../../shared/styles";
+import { darkTheme } from "../../layout/GlobalStyles";
 import Card, { ICard } from "../Card/Card";
+import Section from "../Section/Section";
 import { myProjects } from "./projects";
 
-const CardWrapper = styled.div`
-  background: ${props => props.theme.dark.dark1};
-  ${circuitSvg}
+/**
+ * TODO: Fix -- color scheme hardcoded to darkScheme
+ */
+const WorkWrapper = styled.div`
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgb(0, 0, 0)),
+    linear-gradient(90deg, rgb(255, 0, 136), rgb(252, 138, 14));
+`;
 
+const CardWrapper = styled.div`
   > div {
     display: flex;
+    padding-left: 2rem;
     overflow: scroll;
 
     &::after {
@@ -35,18 +41,30 @@ const CardWrapper = styled.div`
 `;
 
 const Work = (): JSX.Element => (
-  <Fragment>
-    <CTAHeaderText id="work">
-      <WorkText>Work</WorkText>
-    </CTAHeaderText>
-    <CardWrapper>
-      <div>
-        {myProjects.map(project => (
-          <Card key={project.title} card={project} />
-        ))}
-      </div>
-    </CardWrapper>
-  </Fragment>
+  <WorkWrapper id="work">
+    <Section
+      title="Work"
+      bg="linear-gradient(180deg, rgba(84, 27, 74, 0.33), rgb(20, 20, 20))"
+    >
+      <CardWrapper>
+        <div>
+          {myProjects.map((project, i) => {
+            const color = darkTheme.workColors[i % darkTheme.workColors.length];
+            return (
+              <Card
+                key={project.title}
+                card={{
+                  ...project,
+                  background: color,
+                  color
+                }}
+              />
+            );
+          })}
+        </div>
+      </CardWrapper>
+    </Section>
+  </WorkWrapper>
 );
 
 export default Work;

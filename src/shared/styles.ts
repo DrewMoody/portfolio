@@ -13,7 +13,7 @@ export const Button = styled.button`
 
   > div {
     align-self: stretch;
-    background: ${props => props.theme.dark.dark2};
+    background: ${props => props.theme.sectionBg};
     border-radius: 2px;
     position: absolute;
     top: 2px;
@@ -47,7 +47,6 @@ export const CTAHeaderText = styled.div`
 `;
 
 export const ContentTitle = styled.h2`
-  color: #a9e8cb;
   margin-top: 0.5rem;
   margin-bottom: 0.125rem;
   font-size: 2rem;
@@ -68,7 +67,6 @@ export const SectionTitle = styled.h2`
 
 export const ContentDescription = styled.p`
   margin-bottom: 2rem;
-  color: #d6dde4;
   line-height: 1.625;
   font-size: 1rem;
   flex-grow: 1;
@@ -81,7 +79,6 @@ export const ContentDescription = styled.p`
 export const SectionHeader = styled.p`
   font-family: ${props => props.theme.fonts.header};
   font-size: 3rem;
-  color: #d6dde4;
 
   @media (min-width: 768px) {
     font-size: 4rem;

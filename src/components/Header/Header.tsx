@@ -1,86 +1,118 @@
-import React from "react";
+import React, { Fragment } from "react";
+import { FaAngleRight } from "react-icons/fa";
 import styled from "styled-components";
 
-// background: #fffdfd3d;
-// backdrop-filter: blur(40px) saturate(1.8);
-
-const StyledHeader = styled.header`
-  color: #231e1f;
+const HeaderContainer = styled.div`
+  position: relative;
+  height: 95vh;
   display: flex;
-  justify-content: space-between;
-  padding: 0 2.5rem;
+  align-items: center;
+  justify-content: center;
+  background: ${props => props.theme.headerBg};
+`;
+
+const BgImg = styled.img`
   position: absolute;
   top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
   width: 100%;
-  z-index: 1000;
-  flex-direction: column;
-  align-items: center;
+  object-fit: scale-down;
+  filter: ${props => props.theme.headerImgFilter};
+  opacity: ${props => props.theme.headerImgOpacity};
+`;
 
-  @media (min-width: 600px) {
-    flex-direction: row;
-    align-items: unset;
+const Attribution = styled.p`
+  font-size: 0.75rem;
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  color: ${props => props.theme.mainFontColor}cc;
+`;
+
+const CTAContainer = styled.div`
+  text-align: center;
+  z-index: 10;
+  max-width: 428px;
+`;
+
+const CTAHead = styled.h2`
+  font-family: ${props => props.theme.fonts.header};
+  font-size: 2.75rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+
+  @media (min-width: 768px) {
+    font-size: 4rem;
   }
 
-  a {
-    font-weight: bold;
-  }
-
-  nav {
-    display: flex;
-    flex-direction: row;
-
-    svg {
-      font-size: 32px;
-      margin-bottom: 4px;
-    }
-
-    a {
-      padding: 1rem 0.5rem 0.5rem 0.5rem;
-      font-size: 1rem;
-      align-self: stretch;
-
-      @media (min-width: 600px) {
-        padding: 1.5rem 0.5rem 0.5rem 0.5rem;
-      }
-
-      &:not(:last-child) {
-        margin-right: 1.5rem;
-      }
-    }
-
-    a.selected {
-      box-shadow: inset 0 4px 0 0 ${props => props.theme.fontColor};
-    }
+  @media (min-width: 1024px) {
+    font-size: 4rem;
   }
 `;
 
-const StyledLogo = styled.a`
+const CTASupport = styled.p`
+  font-size: 1.375rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+
+  @media (min-width: 468px) {
+    font-size: 1.5rem;
+  }
+`;
+
+const CTAAction = styled.a`
+  color: ${props => props.theme.headerButtonText};
   font-family: ${props => props.theme.fonts.header};
-  font-size: 1.75rem;
-  padding-top: 1rem;
+  font-weight: ${props => props.theme.fontWeights.header};
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  @media (min-width: 600px) {
-    padding-bottom: 0.875rem;
+  > svg {
+    margin-left: 6px;
   }
 
-  svg {
-    margin: 18px 18px 36px 18px;
-    width: 36px;
+  @media (min-width: 468px) {
+    font-size: 1.75rem;
   }
+`;
+
+const HeaderBorder = styled.div`
+  background: ${props => props.theme.headerBorderBg};
+  height: 16px;
 `;
 
 const Header = (): JSX.Element => (
-  <StyledHeader>
-    <StyledLogo href="#">Drew Moody</StyledLogo>
-    <nav>
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </StyledHeader>
+  <Fragment>
+    <HeaderContainer>
+      <BgImg src="images/04.png" />
+      <Attribution>
+        image courtesy of
+        <a
+          href="https://absurd.design"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          {" "}
+          absurd.design
+        </a>
+      </Attribution>
+      <CTAContainer>
+        <CTAHead>Hi, I&apos;m Drew</CTAHead>
+        <CTASupport>
+          A software developer specializing in frontend development
+        </CTASupport>
+        <CTAAction href="#work">
+          Check out my work <FaAngleRight />
+        </CTAAction>
+      </CTAContainer>
+    </HeaderContainer>
+    <HeaderBorder />
+  </Fragment>
 );
 
 export default Header;
-
-// import { Link } from "gatsby";
-// <Link to="/blog">Blog</Link>

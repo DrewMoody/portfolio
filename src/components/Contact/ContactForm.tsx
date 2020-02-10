@@ -6,11 +6,12 @@ import { Button } from "../../shared/styles";
 import useContactForm from "./ContactHooks";
 
 const ContactButton = styled(Button)`
-  background: linear-gradient(45deg, #d48a57, #fdbf92);
+  background: ${props => props.theme.contactButton};
   margin: 1.5rem 0 0 auto;
 
   > div {
-    color: #f1a36c;
+    color: ${props => props.theme.contactButton};
+    background: ${props => props.theme.contactButtonBg};
   }
 `;
 
@@ -89,7 +90,7 @@ const ContactForm = () => {
       />
 
       <ContactButton type="submit">
-        <div style={{ color: "#f1a36c" }}>Contact</div>
+        <div>Contact</div>
       </ContactButton>
     </FormWrapper>
   );

@@ -3,8 +3,8 @@ import { Helmet } from "react-helmet";
 import styled, { ThemeProvider } from "styled-components";
 import config from "../../data/SiteConfig";
 // import Footer from "../components/Footer/Footer";
-import Header from "../components/Header/Header";
-import { GlobalStyle, theme } from "./GlobalStyles";
+import Nav from "../components/Nav/Nav";
+import { darkTheme, GlobalStyle, lightTheme } from "./GlobalStyles";
 
 interface Props {
   children: JSX.Element;
@@ -20,23 +20,19 @@ const MainContent = styled.div`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-
-  > div:first-child {
-    padding-top: 62px;
-  }
 `;
 
 const Layout = (props: Props): JSX.Element => {
   const { children } = props;
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={darkTheme}>
       <StdNavLayout>
         <GlobalStyle />
         <Helmet>
           <meta name="description" content={config.siteDescription} />
         </Helmet>
-        <Header />
+        <Nav />
         <MainContent>{children}</MainContent>
       </StdNavLayout>
     </ThemeProvider>

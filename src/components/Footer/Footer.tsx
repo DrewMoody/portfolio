@@ -1,11 +1,15 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import styled from "styled-components";
 
+const FooterBorder = styled.div`
+  background: ${props => props.theme.footerBorderBg};
+  height: 16px;
+`;
+
 const StyledFooter = styled.footer`
-  background: linear-gradient(5deg, #151e29, #202c3a);
-  box-shadow: 0px 3px 6px 3px #000000a1;
-  color: #c7d0d8;
+  background: ${props => props.theme.footerBg};
+  color: ${props => props.theme.footerColor};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,35 +23,38 @@ const IconsContainer = styled.div`
     > svg {
       height: 2rem;
       width: 2rem;
-      color: #c7d0d8;
+      color: ${props => props.theme.footerColor};
 
       &:hover {
-        color: #de8d98;
+        color: ${props => props.theme.footerHoverColor};
       }
     }
   }
 `;
 
 const Footer = (): JSX.Element => (
-  <StyledFooter>
-    <IconsContainer>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://www.github.com/drewmoody"
-      >
-        <FaGithub />
-      </a>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://www.linkedin.com/in/moodydrew/"
-      >
-        <FaLinkedin />
-      </a>
-    </IconsContainer>
-    <p>Uncopyright</p>
-  </StyledFooter>
+  <Fragment>
+    <FooterBorder />
+    <StyledFooter>
+      <IconsContainer>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.github.com/drewmoody"
+        >
+          <FaGithub />
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.linkedin.com/in/moodydrew/"
+        >
+          <FaLinkedin />
+        </a>
+      </IconsContainer>
+      <p>Uncopyright</p>
+    </StyledFooter>
+  </Fragment>
 );
 
 export default Footer;

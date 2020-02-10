@@ -5,7 +5,7 @@ import { Button, ContentDescription, ContentTitle } from "../../shared/styles";
 const CardContainer = styled.div`
   overflow: hidden;
   border-radius: 4px;
-  background: ${props => props.theme.dark.dark2};
+  background: ${props => props.theme.cardBg};
   box-shadow: 0 0 10px 4px #0e0e0e8c;
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@ const CardButton = styled(Button)`
   background: linear-gradient(45deg, #80969e, #a9e8cb);
 
   > div {
-    color: #a9e8cb;
+    background: ${props => props.theme.cardBg};
   }
 `;
 
@@ -66,7 +66,7 @@ const CardDescription = styled(ContentDescription)`
 `;
 
 const CardSupport = styled.h3`
-  color: #a9e8cbd4;
+  color: ${props => props.theme.headerColor};
   font-size: 1.125rem;
   margin-bottom: 1.25rem;
   letter-spacing: 0.015rem;
@@ -98,13 +98,11 @@ export default (props: IProps) => {
   const openLink = (link: string) => () => window.open(link, "_blank");
 
   return (
-    <CardContainer style={{ borderTop: `8px solid ${card.color}cc` }}>
+    <CardContainer style={{ borderTop: `8px solid ${card.color}` }}>
       {card.imgSrc && <img src={card.imgSrc} />}
       <CardInfo>
-        <CardTitle style={{ color: card.color }}>{card.title}</CardTitle>
-        <CardSupport style={{ color: card.color }}>
-          {card.supportText}
-        </CardSupport>
+        <CardTitle>{card.title}</CardTitle>
+        <CardSupport>{card.supportText}</CardSupport>
         <CardDescription>{card.description}</CardDescription>
       </CardInfo>
       <ButtonContainer>
