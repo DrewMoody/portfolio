@@ -20,7 +20,7 @@ const BgImg = styled.img`
   height: 100%;
   width: 100%;
   object-fit: scale-down;
-  filter: ${props => props.theme.headerImgFilter};
+  filter: ${props => props.theme.headerImgFilter} opacity(${props => props.theme.headerImgOpacity});
   opacity: ${props => props.theme.headerImgOpacity};
 `;
 
