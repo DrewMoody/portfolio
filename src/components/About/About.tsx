@@ -1,16 +1,37 @@
-import React, { Fragment } from "react";
-import styled from "styled-components";
-import { ContentDescription, SectionTitle } from "../../shared/styles";
-import Section from "../Section/Section";
+import React, { Fragment, FunctionComponent } from 'react';
+import styled from 'styled-components';
+import { ContentDescription, SectionTitle } from '../../shared/styles';
+import Section from '../Section/Section';
 
 export const AboutContainer = styled.div`
-  margin: 0 3rem;
-  max-width: 568px;
+  margin: 0 auto;
+  width: calc(
+    100% - ${props => props.theme.sidesPadding.xs} -
+      ${props => props.theme.sidesPadding.xs}
+  );
+
+  @media (min-width: 468px) {
+    max-width: 80%;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 75%;
+  }
 `;
 
 const SkillsTitle = styled(SectionTitle)`
   margin-top: 3rem;
   margin-bottom: 0.75rem;
+
+  @media (min-width: 768px) {
+    margin-top: 4rem 4rem 3rem;
+    font-size: calc(1vw + 2.5rem);
+  }
+
+  @media (min-width: 1024px) {
+    margin-top: calc(2vw + 2rem);
+    font-size: calc(1.25vw + 2rem);
+  }
 
   @media (min-width: 600px) {
     margin-bottom: 0.25rem;
@@ -33,6 +54,14 @@ const KeyContainer = styled.div`
   align-items: center;
   margin-left: 0.75rem;
   margin-bottom: 1.5rem;
+
+  @media (min-width: 768px) {
+    margin-bottom: 2rem;
+  }
+
+  @media (min-width: 1024px) {
+    margin-bottom: calc(1vw + 2rem);
+  }
 `;
 
 const PastSkillKey = styled.div`
@@ -50,6 +79,10 @@ const SkillsContainer = styled.div`
   flex-wrap: wrap;
   width: 100%;
 
+  @media (min-width: 769px) {
+    font-size: calc(1vw + 0.5rem);
+  }
+
   > div {
     color: #d6dde4;
     flex: 1 1 calc(50% - 1rem);
@@ -62,22 +95,25 @@ const SkillsContainer = styled.div`
   }
 `;
 
-const About = () => (
+const About: FunctionComponent = () => (
   <Fragment>
     <Section title="About">
       <AboutContainer>
         <ContentDescription>
           I&apos;m Drew, a software developer with a passion for problem solving
-          and elegant UI/UX. By day, I work as a professional Angular developer
-          on a project for monitoring and optimizing the performance of CNC
-          machines. By night, I love to research and learn about new, trending
-          technologies in the JS community. Currently, after spending a year
-          focused on frontend development, I&apos;m working to get reacquainted
-          with the backend as I begin working on a new full-stack app.
+          and elegant UI/UX. Currently I work on an Angular-based component
+          library. My previous experiences include working on an application
+          that monitors and optimizes the performance of CNC machines and
+          working as a teaching assistant/mentor to JavaScript learners. Outside
+          of work, I enjoy researching and learning about new, trending
+          technologies in the JS community. My current focus is to get
+          reacquainted with the backend as I begin working on a full-stack meal
+          prep app.
         </ContentDescription>
         <ContentDescription>
-          When I&apos;m not working, you can find me cooking up a keto-friendly
-          meal, cozying up with a good book, or tending to my houseplants.
+          If I&apos;m not working, I&apos;m probably out running, cooking up a
+          vegan dinner, cozying up with a good book, or exploring the Raleigh
+          community.
         </ContentDescription>
         <SkillsTitle>Skills</SkillsTitle>
         <KeyContainer>
@@ -102,54 +138,5 @@ const About = () => (
     </Section>
   </Fragment>
 );
-
-// const About = () => (
-//   <Fragment>
-//     <CTAHeaderText id="about">
-//       <AboutText>About</AboutText>
-//     </CTAHeaderText>
-//     <AboutDiv>
-//       <HalfImage imgSrc="images/about.jpg">
-//         <Fragment>
-//           <AboutTitle>About</AboutTitle>
-//           <ContentDescription>
-//             I&apos;m Drew, a software developer with a passion for problem
-//             solving and elegant UI/UX. By day, I work as a professional Angular
-//             developer on a project for monitoring and optimizing the performance
-//             of CNC machines. By night, I love to research and learn about new,
-//             trending technologies in the JS community. Currently, after spending
-//             a year focused on frontend development, I&apos;m working to get
-//             reacquainted with the backend as I begin working on a new full-stack
-//             app.
-//           </ContentDescription>
-//           <ContentDescription>
-//             When I&apos;m not working, you can find me cooking up a
-//             keto-friendly meal, cozying up with a good book, or tending to my
-//             houseplants.
-//           </ContentDescription>
-//           <SkillsTitle>Skills</SkillsTitle>
-//           <KeyContainer>
-//             <PastSkillKey />
-//             <PastSkillDesc>Learning or have previous experience</PastSkillDesc>
-//           </KeyContainer>
-//           <SkillsContainer>
-//             <div>JavaScript/ES6+</div>
-//             <div>TypeScript</div>
-//             <div>HTML</div>
-//             <div>CSS</div>
-//             <div>SCSS/LESS</div>
-//             <div>Angular</div>
-//             <div>RxJS</div>
-//             <div>Electron</div>
-//             <PastExpSkill>NodeJS</PastExpSkill>
-//             <PastExpSkill>PostgreSQL</PastExpSkill>
-//             <PastExpSkill>MongoDB</PastExpSkill>
-//             <PastExpSkill>React</PastExpSkill>
-//           </SkillsContainer>
-//         </Fragment>
-//       </HalfImage>
-//     </AboutDiv>
-//   </Fragment>
-// );
 
 export default About;

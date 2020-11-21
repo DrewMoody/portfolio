@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 interface IProps {
   children: JSX.Element;
@@ -19,7 +19,28 @@ const SectionWrapper = styled.div`
   > h1 {
     font-size: 3.5rem;
     color: white;
-    padding: 3rem 3rem 2rem 3rem;
+    margin: 3rem ${props => props.theme.sidesPadding.xs} 2rem;
+
+    @media (min-width: 468px) {
+      margin: 3rem ${props => props.theme.sidesPadding.m} 2rem;
+    }
+
+    @media (min-width: 768px) {
+      margin: 4rem 4rem 3rem;
+      font-size: calc(1vw + 3.5rem);
+    }
+
+    @media (min-width: 1024px) {
+      margin: calc(2vw + 3rem) 5rem calc(2vw + 2rem);
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding-bottom: 5rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding-bottom: calc(2vw + 4rem);
   }
 `;
 

@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import { darkTheme } from "../../layout/GlobalStyles";
-import Card, { ICard } from "../Card/Card";
-import Section from "../Section/Section";
-import { myProjects } from "./projects";
+import React from 'react';
+import styled from 'styled-components';
+import { darkTheme } from '../../layout/GlobalStyles';
+import Card, { ICard } from '../About/Card/Card';
+import Section from '../Section/Section';
+import { myProjects } from './projects';
 
 /**
  * TODO: Fix -- color scheme hardcoded to darkScheme
@@ -16,11 +16,19 @@ const WorkWrapper = styled.div`
 const CardWrapper = styled.div`
   > div {
     display: flex;
-    padding-left: 2rem;
     overflow: scroll;
+    padding-left: ${props => props.theme.sidesPadding.xs};
+
+    @media (min-width: 468px) {
+      padding-left: ${props => props.theme.sidesPadding.s};
+    }
+
+    @media (min-width: 768px) {
+      padding-left: ${props => props.theme.sidesPadding.m};
+    }
 
     &::after {
-      content: " ";
+      content: ' ';
       flex: 0 0 1.25rem;
 
       @media (min-width: 1024px) {
