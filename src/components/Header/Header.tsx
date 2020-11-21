@@ -1,6 +1,6 @@
-import React, { Fragment } from "react";
-import { FaAngleRight } from "react-icons/fa";
-import styled from "styled-components";
+import React, { Fragment } from 'react';
+import { FaAngleRight } from 'react-icons/fa';
+import styled from 'styled-components';
 
 const HeaderContainer = styled.div`
   position: relative;
@@ -12,8 +12,8 @@ const HeaderContainer = styled.div`
 `;
 
 /**
-* Combining filter property with opacity does NOT work on iOS Safari
-*/
+ * Combining filter property with opacity does NOT work on iOS Safari
+ */
 // opacity: ${props => props.theme.headerImgOpacity};
 
 const BgImg = styled.img`
@@ -25,7 +25,8 @@ const BgImg = styled.img`
   height: 100%;
   width: 100%;
   object-fit: scale-down;
-  filter: ${props => props.theme.headerImgFilter} opacity(${props => props.theme.headerImgOpacity});
+  filter: ${props => props.theme.headerImgFilter}
+    opacity(${props => props.theme.headerImgOpacity});
 `;
 
 const Attribution = styled.p`
@@ -61,14 +62,16 @@ const CTASupport = styled.p`
   font-size: 1.375rem;
   line-height: 1.5;
   margin-bottom: 2rem;
+  padding: 0 1rem;
 
   @media (min-width: 468px) {
     font-size: 1.5rem;
+    padding: 0;
   }
 `;
 
 const CTAAction = styled.a`
-  color: ${props => props.theme.headerButtonText};
+  color: ${props => props.theme.navColor};
   font-family: ${props => props.theme.fonts.header};
   font-weight: ${props => props.theme.fontWeights.header};
   font-size: 1.5rem;
@@ -101,7 +104,7 @@ const Header = (): JSX.Element => (
           rel="noopener noreferrer"
           target="_blank"
         >
-          {" "}
+          {' '}
           absurd.design
         </a>
       </Attribution>

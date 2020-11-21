@@ -1,6 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import { Button, ContentDescription, ContentTitle } from "../../shared/styles";
+import React from 'react';
+import styled from 'styled-components';
+import {
+  Button,
+  ContentDescription,
+  ContentTitle
+} from '../../../shared/styles';
 
 const CardContainer = styled.div`
   overflow: hidden;
@@ -63,6 +67,10 @@ const CardDescription = styled(ContentDescription)`
     margin-bottom: 1rem;
     line-height: 1.5;
   }
+
+  @media (min-width: 769px) {
+    font-size: calc(1vw + 0.5rem);
+  }
 `;
 
 const CardSupport = styled.h3`
@@ -95,7 +103,7 @@ interface IProps {
 export default (props: IProps) => {
   const { card } = props;
 
-  const openLink = (link: string) => () => window.open(link, "_blank");
+  const openLink = (link: string) => () => window.open(link, '_blank');
 
   return (
     <CardContainer style={{ borderTop: `8px solid ${card.color}` }}>

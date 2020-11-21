@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Button = styled.button`
   padding: 6px;
@@ -73,6 +73,10 @@ export const ContentDescription = styled.p`
 
   @media (min-width: 599px) {
     font-size: 1.125rem;
+  }
+
+  @media (min-width: 769px) {
+    font-size: calc(1.25vw + 0.5rem);
   }
 `;
 
