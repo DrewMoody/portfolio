@@ -1,9 +1,9 @@
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField";
-import React from "react";
-import styled from "styled-components";
-import { Button } from "../../shared/styles";
-import useContactForm from "./ContactHooks";
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+import React, { FunctionComponent } from 'react';
+import styled from 'styled-components';
+import { Button } from '../../shared/styles';
+import useContactForm from './ContactHooks';
 
 const ContactButton = styled(Button)`
   background: ${props => props.theme.contactButton};
@@ -18,15 +18,22 @@ const ContactButton = styled(Button)`
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      "& > div:not(:last-of-type)": {
-        flex: "1 1 calc(33.3% - 1rem)",
-        margin: "1rem 1rem 1rem 0",
-        maxWidth: "300px",
-        minWidth: "200px"
+      '& > div:not(:last-of-type)': {
+        flex: '1 1 100%',
+        margin: '1rem 0'
       },
-      "& > div:nth-of-type(4)": {
-        flex: "1 1 100%",
-        margin: "1rem 0"
+      ['@media (min-width:769px)']: {
+        '& > div:not(:last-of-type)': {
+          flex: '1 1 calc(33.3% - 1rem)',
+          margin: '1rem 1rem 1rem 0'
+        }
+      },
+      '& > div:nth-of-type(3)': {
+        margin: '1rem 0'
+      },
+      '& > div:nth-of-type(4)': {
+        flex: '1 1 100%',
+        margin: '1rem 0'
       }
     }
   })
@@ -37,11 +44,11 @@ const FormWrapper = styled.form`
   flex-wrap: wrap;
 `;
 
-const ContactForm = () => {
+const ContactForm: FunctionComponent = () => {
   const classes = useStyles();
   const onContact = () => {
     alert(
-      "Form submission capability is coming soon. In the meantime, you can send me an email at drew.moody@me.com"
+      'Form submission capability is coming soon. In the meantime, you can send me an email at drew.moody@me.com'
     );
   };
 
@@ -58,7 +65,7 @@ const ContactForm = () => {
         type="text"
         name="name"
         onChange={handleInputChange}
-        value={inputs.name || ""}
+        value={inputs.name || ''}
         required={true}
       />
       <TextField
@@ -66,7 +73,7 @@ const ContactForm = () => {
         type="email"
         name="email"
         onChange={handleInputChange}
-        value={inputs.email || ""}
+        value={inputs.email || ''}
         required={true}
       />
       <TextField
@@ -74,7 +81,7 @@ const ContactForm = () => {
         type="text"
         name="phone"
         onChange={handleInputChange}
-        value={inputs.phone || ""}
+        value={inputs.phone || ''}
       />
       <TextField
         id="message-container"
@@ -86,7 +93,7 @@ const ContactForm = () => {
         placeholder="Enter your message here"
         variant="filled"
         onChange={handleInputChange}
-        value={inputs.message || ""}
+        value={inputs.message || ''}
       />
 
       <ContactButton type="submit">
