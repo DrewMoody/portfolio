@@ -100,20 +100,21 @@ const About: FunctionComponent = () => (
     <Section title="About">
       <AboutContainer>
         <ContentDescription>
-          I&apos;m Drew, a software developer with a passion for problem solving
-          and elegant UI/UX. Currently I work on an Angular-based component
-          library. My previous experiences include working on an application
-          that monitors and optimizes the performance of CNC machines and
-          working as a teaching assistant/mentor to JavaScript learners. Outside
-          of work, I enjoy researching and learning about new, trending
-          technologies in the JS community. My current focus is to get
-          reacquainted with the backend as I begin working on a full-stack meal
-          prep app.
+          I&apos;m Drew, a software developer with a passion for efficiency,
+          problem solving, and elegant user interfaces. By day, I work on an
+          Angular-based component library for an audio/video technology company.
+          By night, I&apos;m probably out running, doing yoga, cooking a vegan
+          dinner, or cozying up with a good book. My past work experiences
+          include working on an application that monitors and optimizes the
+          performance of CNC machines, and serving as a teaching assistant +
+          mentor to a group of full-stack JavaScript students.
         </ContentDescription>
         <ContentDescription>
-          If I&apos;m not working, I&apos;m probably out running, cooking up a
-          vegan dinner, cozying up with a good book, or exploring the Raleigh
-          community.
+          Nothing brings me joy like coding does. My current outside-of-work
+          project is a full-stack meal prep application created with Angular.
+          This application will give users the ability to not only track calorie
+          consumption, but to also plan out their meals in advance, generate
+          grocery lists, research and store recipes, and more.
         </ContentDescription>
         <SkillsTitle>Skills</SkillsTitle>
         <KeyContainer>
