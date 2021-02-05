@@ -15,7 +15,7 @@ export const AboutContainer = styled.div`
   }
 
   @media (min-width: 768px) {
-    max-width: 75%;
+    max-width: 692px;
   }
 `;
 
